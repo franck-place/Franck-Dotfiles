@@ -1,0 +1,1 @@
+/home/franck/linuxtoolbox/mybash/.bashrc
