@@ -1,12 +1,13 @@
-# Path to your Oh My Zsh installation.
+# Paths
 export ZSH="$HOME/.oh-my-zsh"
+export PATH=/home/franck/.local/bin:$PATH
 
 # execute fastfetch at start
 fastfetch
 
 # Theme
 ZSH_THEME="agnoster"
-#need go-chroma-bin & ccat
+#go-chroma-bin
 ZSH_COLORIZE_TOOL=chroma
 ZSH_COLORIZE_STYLE="colorful"
 ZSH_COLORIZE_CHROMA_FORMATTER=terminal256
@@ -25,8 +26,4 @@ alias ..="cd ..";
 alias update="paru -Syu";
 alias pacman="sudo pacman";
 alias cat="ccat";
-
-
-
-
-
+alias vi="lvim"; #lunarvim
