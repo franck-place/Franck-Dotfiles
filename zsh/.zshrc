@@ -27,3 +27,4 @@ alias update="paru -Syu";
 alias pacman="sudo pacman";
 alias cat="ccat";
 alias vi="lvim"; #lunarvim
+alias nvi="neovim";
