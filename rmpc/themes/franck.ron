@@ -7,22 +7,22 @@
     draw_borders: true,
     format_tag_separator: " | ",
     browser_column_widths: [20, 38, 42],
-    background_color: None,
+    background_color: "#161616",
     text_color: None,
     header_background_color: None,
     modal_background_color: None,
     modal_backdrop: false,
-    preview_label_style: (fg: "magenta"),
-    preview_metadata_group_style: (fg: "magenta", modifiers: "Bold"),
+    preview_label_style: (fg: "#9C9C9C"),
+    preview_metadata_group_style: (fg: "#9C9C9C", modifiers: "Bold"),
     tab_bar: (
         enabled: true,
-        active_style: (fg: "black", bg: "magenta", modifiers: "Bold"),
+        active_style: (fg: "black", bg: "#9C9C9C", modifiers: "Bold"),
         inactive_style: (),
     ),
-    highlighted_item_style: (fg: "magenta", modifiers: "Bold"),
-    current_item_style: (fg: "black", bg: "magenta", modifiers: "Bold"),
-    borders_style: (fg: "magenta"),
-    highlight_border_style: (fg: "magenta"),
+    highlighted_item_style: (fg: "#9C9C9C", modifiers: "Bold"),
+    current_item_style: (fg: "black", bg: "#9C9C9C", modifiers: "Bold"),
+    borders_style: (fg: "#9C9C9C"),
+    highlight_border_style: (fg: "#9C9C9C"),
     symbols: (
         song: "S",
         dir: "D",
@@ -34,23 +34,23 @@
         playlist_style: None,
     ),
     level_styles: (
-        info: (fg: "magenta", bg: "black"),
+        info: (fg: "#9C9C9C", bg: "black"),
         warn: (fg: "yellow", bg: "black"),
         error: (fg: "red", bg: "black"),
         debug: (fg: "light_green", bg: "black"),
-        trace: (fg: "magenta", bg: "black"),
+        trace: (fg: "#9C9C9C", bg: "black"),
     ),
     progress_bar: (
         symbols: ["[", "-", ">", " ", "]"],
         track_style: (fg: "#1e2030"),
-        elapsed_style: (fg: "magenta"),
-        thumb_style: (fg: "magenta", bg: "#1e2030"),
+        elapsed_style: (fg: "#9C9C9C"),
+        thumb_style: (fg: "#9C9C9C", bg: "#1e2030"),
     ),
     scrollbar: (
         symbols: ["│", "█", "▲", "▼"],
         track_style: (),
         ends_style: (),
-        thumb_style: (fg: "magenta"),
+        thumb_style: (fg: "#9C9C9C"),
     ),
     song_table_format: [
         (
@@ -105,9 +105,9 @@
         rows: [
             (
                 left: [
-                    (kind: Text("["), style: (fg: "magenta", modifiers: "Bold")),
-                    (kind: Property(Status(StateV2(playing_label: "Playing", paused_label: "Paused", stopped_label: "Stopped"))), style: (fg: "magenta", modifiers: "Bold")),
-                    (kind: Text("]"), style: (fg: "magenta", modifiers: "Bold"))
+                    (kind: Text("["), style: (fg: "#9C9C9C", modifiers: "Bold")),
+                    (kind: Property(Status(StateV2(playing_label: "Playing", paused_label: "Paused", stopped_label: "Stopped"))), style: (fg: "#9C9C9C", modifiers: "Bold")),
+                    (kind: Text("]"), style: (fg: "#9C9C9C", modifiers: "Bold"))
                 ],
                 center: [
                     (kind: Property(Song(Title)), style: (modifiers: "Bold"),
@@ -115,8 +115,8 @@
                     )
                 ],
                 right: [
-                    (kind: Property(Widget(ScanStatus)), style: (fg: "magenta")),
-                    (kind: Property(Widget(Volume)), style: (fg: "magenta"))
+                    (kind: Property(Widget(ScanStatus)), style: (fg: "#9C9C9C")),
+                    (kind: Property(Widget(Volume)), style: (fg: "#9C9C9C"))
                 ]
             ),
             (
@@ -129,8 +129,8 @@
                     (kind: Text(" kbps)"))
                 ],
                 center: [
-                    (kind: Property(Song(Artist)), style: (fg: "magenta", modifiers: "Bold"),
-                        default: (kind: Text("Unknown"), style: (fg: "magenta", modifiers: "Bold"))
+                    (kind: Property(Song(Artist)), style: (fg: "#9C9C9C", modifiers: "Bold"),
+                        default: (kind: Text("Unknown"), style: (fg: "#9C9C9C", modifiers: "Bold"))
                     ),
                     (kind: Text(" - ")),
                     (kind: Property(Song(Album)),
