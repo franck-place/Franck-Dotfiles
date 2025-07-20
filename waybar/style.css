@@ -125,16 +125,16 @@ label:focus {
 
 #mpd.disconnected {
     background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
 }
 
 #mpd.stopped {
     background-color: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 #mpd.paused {
     background-color: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0.75)
 }
 
-#scratchpad {
-    background: rgba(0, 0, 0, 0.2);
-}
