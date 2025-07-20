@@ -8,7 +8,10 @@
 
   // modules
 
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": [
+    "custom/menu",
+    "hyprland/workspaces"
+  ],
   "modules-center": ["mpd"],
   "modules-right":[
     "wireplumber",
@@ -24,6 +27,13 @@
     "format": "  ",
     "tooltip": false,
     "on-click": "wlogout --protocol layer-shell"
+  },
+
+    // power button module
+    "custom/menu": {
+    "format": "  󰣇",
+    "tooltip": false,
+    "on-click": "walker"
   },
 
   // mpd 
