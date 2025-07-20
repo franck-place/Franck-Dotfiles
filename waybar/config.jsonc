@@ -1,0 +1,75 @@
+{
+  // general
+
+  "layer": "top",
+  "position": "top",
+  "height": 40,
+  "spacing": 20,
+
+  // modules
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["mpd"],
+  "modules-right":[
+    "wireplumber",
+    "tray",
+    "clock",
+    "custom/power"
+  ],
+
+  // modules settings
+
+  // power button module
+    "custom/power": {
+    "format": "  ",
+    "tooltip": false,
+    "on-click": "wlogout --protocol layer-shell"
+  },
+
+  // mpd 
+  "mpd": {
+    "format": "{stateIcon}  {artist} - {title}  ",
+    "format-disconnected": "Disconnected  ",
+    "format-stopped": "Stopped  ",
+    "interval": 10
+    },
+    "state-icons": {
+        "paused": "",
+        "playing": ""
+    },
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)",
+
+  // wireplumber need pavucontrol installed
+  "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "on-click": "pavucontrol",
+    "format-icons": ["", "", ""]
+   },
+
+  // tray
+   "tray": {
+    "icon-size": 19,
+    "spacing": 10
+   },
+  
+  // workspaces
+  "hyprland/workspaces": {
+    	"format": "{icon} ",
+	"format-icons": {
+		"1": "",
+		"2": "",
+		"3": "",
+		"4": "",
+    "5": "",
+		"default": ""
+	},
+   "persistent-workspaces": {
+      "DP-3": [ 3, 4, 5],
+      "DP-4": [ 1, 2 ]
+    }
+   } 
+}
+
+
