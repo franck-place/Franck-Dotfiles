@@ -75,8 +75,8 @@
 		"default": ""
 	},
    "persistent-workspaces": {
-      "DP-3": [3, 4],
-      "DP-4": [1, 2, 3, 5]
+      "DP-3": [1, 2, 5],
+      "DP-4": [3, 4]
     }
    },
        "clock": {
