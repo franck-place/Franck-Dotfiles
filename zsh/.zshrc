@@ -6,14 +6,12 @@ export PATH=/home/franck/.local/bin:$PATH
 fastfetch
 
 # Theme
-ZSH_THEME="agnoster"
+ZSH_THEME="franck"
 #go-chroma-bin
 ZSH_COLORIZE_TOOL=chroma
 ZSH_COLORIZE_STYLE="colorful"
 ZSH_COLORIZE_CHROMA_FORMATTER=terminal256
 
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh

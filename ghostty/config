@@ -1,5 +1,0 @@
-command = /usr/bin/zsh --login --interactive
-background = 121212
-background-opacity = 0.65
-font-family = Terminus 
-font-size = 14

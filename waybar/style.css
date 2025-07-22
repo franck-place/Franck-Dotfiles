@@ -1,146 +1,172 @@
+/* Global Styles */
 * {
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-family: JetBrainMono;
+    font-size: 15px;
 }
 
-/* WAYBAR */
-
+/* Main Bar */
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-bottom: 3px solid rgba(0, 0, 0, 0.75);
+    background: rgba(18, 18, 18, 0.70);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-button {
-    
-    box-shadow: inset 0 -3px transparent;
-    border: none;
-    border-radius: 0;
+/* Tooltips */
+tooltip {
+    background: rgba(24, 24, 24, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
-/* WORKSPACE */
-
-#workspaces button {
-    background-color: rgba(0, 0, 0, 0);
+tooltip label {
     color: #ffffff;
-}
-#workspaces button.active {
-    padding: 0 5px;
-    background-color: rgba(0, 0, 0, 0);
-    color: #ffffff;
-    box-shadow: inset 0 -3px #ffffff;
+    font-size: 13px;
+    letter-spacing: 0.3px;
 }
 
-#workspaces button:hover {
-    background-color: rgba(0, 0, 0, 0);
+/* Module Groups */
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 4px 4px;
 }
 
-#workspaces button.focused {
-    background-color: rgba(0, 0, 0, 0);
-    box-shadow: inset 0 -3px #ffffff;
-}
-
-#workspaces button.urgent {
-    background-color: rgba(0, 0, 0, 0);
-}
-
-#mode {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
+/* Base Module Styling */
+#workspaces,
+#window,
 #clock,
 #wireplumber,
 #tray,
-#mode,
-#mpd {
-    padding: 0 10px;
-    color: #ffffff;
+#mpd
+{
+    background: transparent;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0 0px;
+    margin: 0 0px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-#window,
+/* Workspaces */
 #workspaces {
+    padding: 0;
     margin: 0 4px;
 }
 
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+#workspaces button {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 0 8px;
+    margin: 0 0px;
+    min-width: 36px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 2px solid transparent;
 }
 
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
-/* CLOCK */
+#workspaces button.active {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
 
+#workspaces button.urgent {
+    background: rgba(255, 68, 68, 0.2);
+    color: #ff4444;
+    border-bottom: 2px solid #ff4444;
+    animation: urgent-workspace 1s ease-in-out infinite;
+}
+
+/* Window Title */
+#window {
+    font-weight: 400;
+    font-family: Roboto, sans-serif;
+    min-width: 60px;
+}
+
+window#waybar.empty #window {
+    background: transparent;
+    color: transparent;
+}
+
+/* Clock */
 #clock {
-    background-color: rgba(0, 0, 0, 0);
-    font-size: 16px;
-    font-family: Roboto;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-family: "JetBrains Mono", monospace;
 }
 
-
-label:focus {
-    background-color: #000000;
-}
-
-/* WIREPLUMBER */
-
+/* Audio (WirePlumber) */
 #wireplumber {
-    background-color: rgba(0, 0, 0, 0);
-    color: #fff;
-    font-size: 16px;
-    font-family: Roboto;
+    min-width: 45px;
 }
 
 #wireplumber.muted {
-    background-color: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.05);
 }
 
-/* TRAY */
-
+/* System Tray */
 #tray {
-    background-color: rgba(0, 0, 0, 0);
-    font-size: 16px;
+    margin: 8px;
 }
 
 #tray > .passive {
     -gtk-icon-effect: dim;
+    opacity: 0.5;
 }
 
+#tray > .active,
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: rgba(0, 0, 0, 0);
+    opacity: 1;
 }
 
 /* MPD */
-
 #mpd {
-    background-color: rgba(0, 0, 0, 0);
-    color: #fff;
-    font-size: 16px;
-    font-family: Roboto;
+    min-width: 100px;
 }
 
 #mpd.disconnected {
-    background-color: rgba(0, 0, 0, 0);
-    color: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0.3);
 }
 
 #mpd.stopped {
-    background-color: rgba(0, 0, 0, 0);
     color: rgba(255, 255, 255, 0.5);
 }
 
 #mpd.paused {
-    background-color: rgba(0, 0, 0, 0);
-    color: rgba(255, 255, 255, 0.75)
+    color: rgba(255, 255, 255, 0.7);
 }
 
+#mpd.playing {
+    color: #ffffff;
+}
+    
+    #workspaces button {
+        color: rgba(255, 255, 255, 0.37);
+    }
+    
+    #workspaces button.active {
+        background: rgba(0, 0, 0, 0.1);
+        color: #ffffff;
+        border-bottom: 2px solid #ffffff;
+    }
+    
+    tooltip {
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        color: #333333;
+    }
+    
+    tooltip label {
+        color: #333333;
+    }
