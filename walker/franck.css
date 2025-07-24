@@ -1,0 +1,226 @@
+/* Monochrome Theme for Walker */
+
+/* Color definitions */
+@define-color bg_primary #000000;
+@define-color bg_secondary #0a0a0a;
+@define-color bg_tertiary #141414;
+@define-color border_color #333333;
+
+/* Override GTK theme colors */
+@define-color theme_bg_color #000000;
+@define-color theme_fg_color #ffffff;
+@define-color theme_base_color #000000;
+@define-color theme_text_color #ffffff;
+@define-color theme_selected_bg_color #ffffff;
+@define-color theme_selected_fg_color #000000;
+@define-color theme_unfocused_bg_color #000000;
+@define-color theme_unfocused_fg_color #ffffff;
+@define-color theme_unfocused_base_color #000000;
+@define-color theme_unfocused_text_color #ffffff;
+@define-color theme_unfocused_selected_bg_color #ffffff;
+@define-color theme_unfocused_selected_fg_color #000000;
+
+/* Window */
+#window {
+    background-color: alpha(#000000, 0.75);
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+}
+
+/* Search */
+#search {
+    background-color: alpha(#0a0a0a, 0.8);
+    border-radius: 8px;
+    border: 1px solid alpha(#333333, 0.6);
+    padding: 8px;
+    margin: 0 auto;
+    max-width: 380px;
+}
+
+#prompt {
+    color: #999999;
+}
+
+#input,
+#input entry {
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    caret-color: #ffffff;
+}
+
+#clear {
+    color: #999999;
+}
+
+/* List and items */
+#scroll {
+    background-color: transparent;
+    margin: 0 auto;
+}
+
+#list {
+    background-color: transparent;
+    margin: 0 auto;
+    max-width: 460px;
+}
+
+/* Scrollbar styling */
+scrollbar {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+scrollbar slider {
+    background-color: #666666;
+    border-radius: 4px;
+    min-width: 8px;
+    min-height: 40px;
+    margin-right: 4px;
+}
+
+scrollbar slider:hover {
+    background-color: #999999;
+}
+
+/* Ensure scroll takes full width */
+#scroll {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+/* Reset all list styling */
+list,
+list row,
+list row.activatable {
+    background: transparent;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Item base */
+#item {
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 2px auto;
+    background-color: transparent;
+    max-width: 440px;
+}
+
+/* SELECTION STYLING - Using descendant selectors */
+#list .selected,
+#list .selected *,
+#list .hover,
+#list .hover * {
+    background-color: #ffffff;
+}
+
+#list .selected label,
+#list .selected image,
+#list .hover label,
+#list .hover image {
+    color: #000000;
+}
+
+/* Try pseudo-class on list children */
+#list > :hover,
+#list > :hover * {
+    background-color: #ffffff;
+}
+
+#list > :hover label,
+#list > :hover image {
+    color: #000000;
+}
+
+#list > :selected,
+#list > :selected *,
+#list > :focus,
+#list > :focus * {
+    background-color: #ffffff;
+}
+
+#list > :selected label,
+#list > :selected image,
+#list > :focus label,
+#list > :focus image {
+    color: #000000;
+}
+
+/* Item content */
+#icon {
+    color: #cccccc;
+    font-size: 24px;
+}
+
+#label {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#sub {
+    color: #999999;
+    font-size: 12px;
+}
+
+#activation_label {
+    color: #666666;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: monospace;
+    background-color: #141414;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    padding: 2px 6px;
+    margin-left: auto;
+}
+
+/* Try using attribute selectors */
+[selected] {
+    background-color: #ffffff !important;
+}
+
+[selected] label,
+[selected] image {
+    color: #000000 !important;
+}
+
+/* Bar */
+#bar {
+    background-color: alpha(#0a0a0a, 0.8);
+    border-top: 1px solid alpha(#333333, 0.6);
+    padding: 8px;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Override everything in list context */
+#list row {
+    border-radius: 6px;
+    padding: 0;
+    margin: 2px 0;
+    background-color: transparent;
+}
+
+#list row:selected,
+#list row:hover,
+#list row:focus,
+#list row:active {
+    background-color: white !important;
+    background-image: none !important;
+}
+
+#list row:selected *,
+#list row:hover *,
+#list row:focus *,
+#list row:active * {
+    color: black !important;
+    background-color: transparent !important;
+}

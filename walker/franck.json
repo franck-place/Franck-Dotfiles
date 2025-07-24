@@ -1,0 +1,175 @@
+{
+  "ui": {
+    "fullscreen": false,
+    "ignore_exclusive": false,
+    "anchors": {
+      "bottom": false,
+      "left": false,
+      "right": false,
+      "top": false
+    },
+    "window": {
+      "name": "window",
+      "width": 500,
+      "height": 400,
+      "margins": {
+        "top": 0,
+        "bottom": 0,
+        "start": 0,
+        "end": 0
+      },
+      "box": {
+        "name": "box",
+        "orientation": "vertical",
+        "spacing": 0,
+        "margins": {
+          "top": 12,
+          "bottom": 12,
+          "start": 12,
+          "end": 12
+        },
+        "search": {
+          "name": "search",
+          "orientation": "horizontal",
+          "spacing": 8,
+          "h_align": "center",
+          "width": 400,
+          "margins": {
+            "top": 0,
+            "bottom": 12,
+            "start": 0,
+            "end": 0
+          },
+          "prompt": {
+            "name": "prompt",
+            "icon": "search",
+            "icon_size": "large",
+            "pixel_size": 20,
+            "v_align": "center",
+            "margins": {
+              "start": 4,
+              "end": 4
+            }
+          },
+          "input": {
+            "name": "input",
+            "h_expand": true
+          },
+          "spinner": {
+            "name": "spinner",
+            "width": 20,
+            "height": 20
+          },
+          "clear": {
+            "name": "clear",
+            "icon": "clear",
+            "icon_size": "large",
+            "pixel_size": 20,
+            "margins": {
+              "start": 4,
+              "end": 4
+            }
+          }
+        },
+        "scroll": {
+          "name": "scroll",
+          "v_expand": true,
+          "h_expand": true,
+          "h_align": "center",
+          "overlay_scrolling": true,
+          "h_scrollbar_policy": "never",
+          "v_scrollbar_policy": "automatic",
+          "list": {
+            "name": "list",
+            "orientation": "vertical",
+            "spacing": 2,
+            "min_height": 300,
+            "max_height": 600,
+            "max_width": 460,
+            "h_align": "center",
+            "always_show": false,
+            "grid": false,
+            "placeholder": {
+              "name": "placeholder",
+              "h_align": "center",
+              "v_align": "center"
+            },
+            "item": {
+              "name": "item",
+              "orientation": "horizontal",
+              "spacing": 12,
+              "margins": {
+                "top": 8,
+                "bottom": 8,
+                "start": 12,
+                "end": 12
+              },
+              "icon": {
+                "name": "icon",
+                "icon_size": "large",
+                "pixel_size": 24,
+                "margins": {
+                  "end": 0
+                }
+              },
+              "text": {
+                "name": "text",
+                "orientation": "vertical",
+                "spacing": 2,
+                "h_expand": true,
+                "label": {
+                  "name": "label",
+                  "x_align": 0,
+                  "wrap": false
+                },
+                "sub": {
+                  "name": "sub",
+                  "x_align": 0,
+                  "wrap": false
+                }
+              },
+              "activation_label": {
+                "name": "activation_label",
+                "overlay": false,
+                "hide_modifier": false,
+                "margins": {
+                  "start": 8
+                }
+              }
+            }
+          }
+        },
+        "bar": {
+          "name": "bar",
+          "orientation": "horizontal",
+          "position": "bottom",
+          "spacing": 8,
+          "margins": {
+            "top": 12,
+            "bottom": 0,
+            "start": 0,
+            "end": 0
+          },
+          "entry": {
+            "name": "bar_entry",
+            "orientation": "horizontal",
+            "spacing": 8,
+            "margins": {
+              "top": 4,
+              "bottom": 4,
+              "start": 8,
+              "end": 8
+            },
+            "icon": {
+              "name": "bar_icon",
+              "pixel_size": 16
+            },
+            "label": {
+              "name": "bar_label"
+            }
+          }
+        }
+      }
+    }
+  }
+}

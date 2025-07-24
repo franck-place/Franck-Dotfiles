@@ -14,9 +14,3 @@
 ## Screenshots
 
 ![](https://i.imgur.com/YRww73p.png)
-
-
-## Roadmap
-
-- Walker Monochrome Theme
-
