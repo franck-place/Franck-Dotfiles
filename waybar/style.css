@@ -170,3 +170,7 @@ window#waybar.empty #window {
     tooltip label {
         color: #333333;
     }
+
+#custom-notification {
+  font-family: "NotoSansMono Nerd Font";
+}
