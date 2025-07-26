@@ -81,7 +81,7 @@
     }
    },
        "clock": {
-        "format": "{:%A, %B %d, %Y (%R)} ",
+        "format": "{:%B %d, %R} ",
         "tooltip": false
     }, 
 

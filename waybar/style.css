@@ -7,7 +7,7 @@
 /* Main Bar */
 window#waybar {
     background: rgba(18, 18, 18, 0.70);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgb(255, 255, 255);
     color: #ffffff;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
